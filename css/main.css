@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 body{
     background-image: url('../img/bg.png');
     font-family: 'Poppins', sans-serif;
@@ -29,7 +33,7 @@ img{
     font-size: 0.9em;
 }
 
-.container27px{
+.container1{
     margin: 0 27px;
 }
 
@@ -56,14 +60,55 @@ img{
     text-decoration: none;
 }
 
+.menu-escondido{
+    
+}
+
 .menu{
-    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    background-color: #d25230;
+    padding: 15px;
+    width: 200px;
+    height: 450px;
+    font-weight: 400;
+    line-height: 2;
+    box-sizing: border-box;
+    font-size: 1em;
+    transform: translateX(200px);
+    transition: transform 0.8s;
+}
+
+.menu li{
+    list-style-type: none
+}
+
+.menu li a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.8s;
+}
+
+.menu li a:hover{
+    border-bottom: 2px solid #ffff;
 }
 
 .btn-menu{
     font-size: 30px;
     color: #d25230;
     cursor: pointer;
+}
+
+.btn-menu-aberto{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    z-index: 9;
+    color: white;
 }
 
 .conteudo-header{
@@ -241,7 +286,9 @@ img{
 }
 
 .formulario{
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formulario input, .formulario textarea{
@@ -252,13 +299,15 @@ img{
 .formulario input:not(.btn), .formulario textarea{
     border-radius: 8px;
     font-size: 11px;
-    min-width: 300px;
-    max-width: 450px;
     padding: 8px;
+    width: 350px;
+    min-width: 350px;
+    max-width: 450px;
 }
 
 #btn-submit{
     cursor: pointer;
+    width: 200px;
 }
 
 /*FOOTER PRINCIPAL*/
@@ -266,6 +315,11 @@ img{
     background-color: black;
     color: #d25230;
     padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+.footer-principal img{
+    max-width: 200px;
 }
 
 .menu-footer{
@@ -281,4 +335,51 @@ img{
 
 .menu-footer li a{
     color: #d25230;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1025px) {
+    .container1{
+        margin-left: 143px;
+        margin-right: 143px;
+    }
+
+    #btn-menu{
+        display: none;
+    }
+
+    .container-topo{
+        align-items: center;
+    }
+
+    .menu{
+        position: relative;
+        margin: 0;
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        height: auto;
+        font-weight: 400;
+        line-height: 1;
+        box-sizing: border-box;
+        font-size: 1em;
+        transform: translateX(0);
+        transition: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /*.menu li{
+        list-style-type: none
+    }*/
+    
+    .menu li a{
+        color: black;
+        border: none;
+        transition: color 0.6s;
+    }
+
+    .menu li a:hover{
+        color: #d25230;
+    }
 }
