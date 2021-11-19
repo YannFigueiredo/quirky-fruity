@@ -16,7 +16,6 @@ function Menu(config){
         _this.btn_menu.classList.add('btn-menu-aberto');
         _this.btn_menu.classList.remove('fa-bars');
         _this.btn_menu.classList.add('fa-times');
-        _this.menu.classList.remove('menu-escondido');
 
         _this.menu.style.transform = 'translateX(0px)';
     }
@@ -25,7 +24,6 @@ function Menu(config){
         _this.btn_menu.classList.remove('btn-menu-aberto');
         _this.btn_menu.classList.add('fa-bars');
         _this.btn_menu.classList.remove('fa-times');
-        _this.menu.classList.add('menu-escondido');
 
         _this.menu.style.transform = 'translateX(200px)';
     }
