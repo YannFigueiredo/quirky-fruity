@@ -1,0 +1,284 @@
+body{
+    background-image: url('../img/bg.png');
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+img{
+    max-width: 100%;
+}
+
+.btn{
+    color: white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.btn-pequeno-laranja{
+    background-color: #d25230;
+    height: 42px;
+    padding: 5px 35px;
+    font-size: 0.8em;
+}
+
+.btn-medio-preto{
+    background-color: black;
+    height: 50px;
+    padding: 5px 45px;
+    font-size: 0.9em;
+}
+
+.container27px{
+    margin: 0 27px;
+}
+
+.container144px{
+    margin: 0 144px;
+}
+
+.txt-destaque{
+    color: #d25230;
+}
+
+/*HEADER*/
+.container-topo{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.logo{
+    color: #d25230;
+    font-size: 36px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.menu{
+    display: none;
+}
+
+.btn-menu{
+    font-size: 30px;
+    color: #d25230;
+    cursor: pointer;
+}
+
+.conteudo-header{
+    margin-top: 30px;
+}
+
+.conteudo-principal img{
+    display: none;
+}
+
+.conteudo-principal div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.conteudo-principal div h1{
+    font-size: 36px;
+    font-weight: 900;
+    display: inline-block;
+    max-width: 460px;
+}
+
+#btn-learn-header{
+    text-decoration: none;
+    height: 20px;
+}
+
+.conteudo-complementar{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-complementar p:nth-child(1){
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.conteudo-complementar p:nth-child(2){
+    color: #d25230;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+/*SECTION APRESENTAÇÃO*/
+.apresentacao{
+    background-color: #678d8e;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.conteudo-apresentacao p{
+    font-size: 0.8em;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+#btn-apresentacao{
+    text-decoration: none;
+}
+
+.img-apresentacao{
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 40px auto 0 auto;
+}
+
+.img-apresentacao img:nth-child(1){
+    width: 200px;
+    height: 150px;
+}
+
+.img-apresentacao img:nth-child(2){
+    width: 110px;
+    height: 180px;
+}
+
+/*SEÇÃO PRODUTOS*/
+.produtos h2{
+    color: #d25230;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.lista{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.lista img:nth-child(1){
+    order: 3;
+    width: 200px;
+    grid-column: 1/4;
+    margin: 0 auto 40px auto;
+}
+
+.lista img:nth-child(2), .lista img:nth-child(3){
+    width: 200px;
+    margin: auto;
+}
+
+.infos div h3{
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    max-width: 460px;
+}
+
+.infos div p{
+    font-size: 0.8em;
+    text-align: justify;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+#btn-seemore{
+    text-decoration: none;
+}
+
+.infos img{
+    margin: 40px auto 40px auto;
+}
+
+/*SECTION AÚNCIOS EM DESTAQUE*/
+.anuncios-destaques{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(103, 141, 142, 0.8);
+    padding: 40px 0 40px 0;
+}
+
+.anuncios-destaques article{
+    min-width: 150px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.anuncios-destaques article h4{
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.anuncios-destaques article p{
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#btn-add-carrinho{
+    cursor: pointer;
+}
+
+/*SECTION REGISTRO*/
+.registro{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.registro h3{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.formulario{
+    margin: auto;
+}
+
+.formulario input, .formulario textarea{
+    margin-top: 10px;
+    resize: none;
+}
+
+.formulario input:not(.btn), .formulario textarea{
+    border-radius: 8px;
+    font-size: 11px;
+    min-width: 300px;
+    max-width: 450px;
+    padding: 8px;
+}
+
+#btn-submit{
+    cursor: pointer;
+}
+
+/*FOOTER PRINCIPAL*/
+.footer-principal{
+    background-color: black;
+    color: #d25230;
+    padding: 30px 0 30px 0;
+}
+
+.menu-footer{
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.menu-footer li{
+    list-style-type: none;
+}
+
+.menu-footer li a{
+    color: #d25230;
+}
