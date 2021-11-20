@@ -290,6 +290,9 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 650px;
+    margin: auto;
+    padding: 0 27px 0 27px;
 }
 
 .formulario input, .formulario textarea{
@@ -297,13 +300,17 @@ img{
     resize: none;
 }
 
+.formulario input:focus, .formulario textarea:focus{
+    outline: none!important;
+    border: 2px solid #d25230;
+}
+
 .formulario input:not(.btn), .formulario textarea{
     border-radius: 8px;
     font-size: 11px;
     padding: 8px;
-    width: 350px;
-    min-width: 350px;
-    max-width: 450px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #btn-submit{
@@ -378,6 +385,7 @@ img{
 
     .menu li a:hover{
         color: #d25230;
+        border: none;
     }
 
     .conteudo-principal{
@@ -469,5 +477,77 @@ img{
         width: 300px;
         margin: 0 15px 0 0;
         align-self: right;
+    }
+
+    .infos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 230px;
+        margin-bottom: 200px;
+    }
+
+    .infos div{
+        max-width: 410px;
+    }
+
+    .infos div h3{
+        font-size: 40px;
+    }
+    
+    .infos img{
+        margin: 0;
+        width: 600px;
+        height: 420px;
+    }
+
+    .anuncios-destaques{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+        padding: 84px 143px 84px 143px;
+    }
+
+    .anuncios-destaques article:nth-child(2){
+        margin-bottom: 108px;
+    }
+
+    .anuncios-destaques article:nth-child(3){
+        margin-top: 54px;
+    }
+
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 0 5px;
+        margin: auto;
+        grid-template-areas: "first-name last-name"
+                             "email email"
+                             "msg msg"
+                             "submit submit";
+        max-width: 700px;
+    }
+
+    #campo-nome{
+        grid-area: first-name;
+    }
+
+    #campo-sobrenome{
+        grid-area: last-name;
+    }
+
+    #campo-email{
+        grid-area: email;
+    }
+
+    #campo-mensagem{
+        grid-area: msg;
+    }
+
+    #btn-submit{
+        grid-area: submit;
+        margin: 10px auto 0 auto;
     }
 }
