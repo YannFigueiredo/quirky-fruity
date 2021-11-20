@@ -33,7 +33,7 @@ function Menu(config){
     //Impede que ao reduzir a tela o menu já apareça aberto sem ter sido pressionado o botão
     function verificarMenuAberto(){
         window.addEventListener('resize', function(){
-            if(window.innerWidth < 1025 && _this.btn_menu.classList.contains('btn-menu-aberto'))
+            if(window.innerWidth >= 1025 && _this.btn_menu.classList.contains('btn-menu-aberto'))
                 fecharMenu();
         });
     }
