@@ -24,6 +24,7 @@ img{
     height: 42px;
     padding: 5px 35px;
     font-size: 0.8em;
+    transition: background-color 0.8s;
 }
 
 .btn-medio-preto{
@@ -31,6 +32,15 @@ img{
     height: 50px;
     padding: 5px 45px;
     font-size: 0.9em;
+    transition: background-color 0.8s;
+}
+
+.btn-pequeno-laranja:hover{
+    background-color: #d6795f;
+}
+
+.btn-medio-preto:hover{
+    background-color: #d25230;
 }
 
 .container1{
@@ -549,5 +559,49 @@ img{
     #btn-submit{
         grid-area: submit;
         margin: 10px auto 0 auto;
+    }
+
+    .footer-principal{
+        background-color: black;
+        color: #d25230;
+        padding: 30px 0 30px 0;
+        text-align: left;
+        position: relative;
+        height: 400px;
+    }
+
+    .footer-principal .logo{
+        font-size: 50px;
+    }
+    
+    .footer-principal img{
+        max-width: 250px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: -20px;
+        margin-bottom: 30px;
+    }
+    
+    .menu-footer{
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0;
+        margin-top: 50px;
+    }
+    
+    .menu-footer li{
+        list-style-type: none;
+    }
+    
+    .menu-footer li a{
+        color: #d25230;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .menu-footer{
+        grid-template-columns: repeat(4, 200px);
     }
 }

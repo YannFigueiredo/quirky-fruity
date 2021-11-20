@@ -4,6 +4,8 @@ function Menu(config){
 
     _this = this;
 
+    verificarMenuAberto();
+
     _this.btn_menu.addEventListener('click', function(){
         if(_this.btn_menu.classList.contains('btn-menu-aberto')){
             fecharMenu();
@@ -26,5 +28,13 @@ function Menu(config){
         _this.btn_menu.classList.remove('fa-times');
 
         _this.menu.style.transform = 'translateX(200px)';
+    }
+
+    //Impede que ao reduzir a tela o menu já apareça aberto sem ter sido pressionado o botão
+    function verificarMenuAberto(){
+        window.addEventListener('resize', function(){
+            if(window.innerWidth < 1025 && _this.btn_menu.classList.contains('btn-menu-aberto'))
+                fecharMenu();
+        });
     }
 }
